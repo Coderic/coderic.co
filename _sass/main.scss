@@ -41,13 +41,13 @@ body {
   letter-spacing:-2px;
 }
 .bg-pattern {
-    background-image: url(../images/pattern.png);
+    background-image: url(../../images/pattern.png);
 }
 
 .cards-animate .card {
     position: relative;
     border-radius: 15px;
-    background: url(../images/feature6.png) #e5e7eb;
+    background: url(../../images/feature6.png) #e5e7eb;
     z-index: 1;
     margin-bottom: 30px;
     overflow: hidden;
@@ -65,7 +65,7 @@ body {
     background-position: center;
 }
 .jumbotron {
-    background-image: url(../images/breadcumb-bg.png) ;
+    background-image: url(../../images/breadcumb-bg.png) ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -224,7 +224,7 @@ body {
   height: 80px;
   width: 80px;
   background-repeat: no-repeat;
-  background-image: url(../images/lang-logo.png)
+  background-image: url(../../images/lang-logo.png)
 }
 
 .lang-logo.nodejs {

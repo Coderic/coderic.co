@@ -1,5 +1,5 @@
 var webAuth = new auth0.WebAuth({
-    clientID: 'ZEZjUDVOSfUoDIN1cKYLkohGybyyfiBE',
+    clientID: 'SjjeZ_9-Ewi3ElLh0rizq1AgcTnU4jEE',
     domain: 'auth.coderic.org',
     audience: `https://coderic.eu.auth0.com/api/v2/`,
     scope: 'openid profile email',

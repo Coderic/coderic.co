@@ -88,9 +88,9 @@ coderic_network:
     url: "https://coderic.cloud"
     description: "Cloud infrastructure and services division"
   
-  - name: "Coderic Network"
+  - name: "Coderic Hub"
     url: "https://coderic.net"
-    description: "Network and connectivity solutions"
+    description: "Content hub and digital resources platform"
   
   - name: "Coderic Fintech"
     url: "https://coderic.co"

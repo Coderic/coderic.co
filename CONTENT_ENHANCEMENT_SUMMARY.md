@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # ?? Resumen de Mejora de Contenido - Coderic Fintech
 
 ## ?? Objetivo Completado

@@ -1,3 +1,7 @@
+---
+render_with_liquid: false
+---
+
 # ????? Gu?a del Desarrollador - Coderic Fintech
 
 ## ?? Inicio R?pido

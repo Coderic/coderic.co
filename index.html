@@ -188,7 +188,7 @@ navigation: portal.html
             <p class="text-xl text-gray-300">{{ company.description }}</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {% for property in company.network %}
+            {% for property in company.coderic_network %}
             <a href="{{ property.url }}" target="_blank" class="bg-stone-700 p-6 rounded-lg hover:bg-stone-600 transition-colors duration-300 text-center">
                 <h3 class="text-xl font-bold mb-3 text-orange-400">{{ property.name }}</h3>
                 <p class="text-gray-300 text-sm">{{ property.description }}</p>

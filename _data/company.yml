@@ -79,7 +79,7 @@ social:
   github: "https://github.com/Coderic"
 
 # Related Properties
-network:
+coderic_network:
   - name: "Coderic Corporation"
     url: "https://coderic.org"
     description: "Parent company and corporate headquarters"

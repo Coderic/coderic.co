@@ -1,0 +1,15 @@
+<a href="{{ include.url }}" class="card h-64 px-4 pt-8 rounded-lg shadow-md">
+    <div class="boxie">
+        <div class="icon mb-4">
+            {% if include.icon %}
+                {{ include.icon }}
+            {% else %}
+                <svg class="w-10 h-10 text-gray-500 mx-auto mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                    <rect x="2" y="28" width="28" height="2"/>
+                </svg>
+            {% endif %}
+        </div>
+        <h3 class="text-lg font-semibold text-center mb-2">{{ include.title }}</h3>
+        <p class="text-center">{{ include.description }}</p>
+    </div>
+</a>

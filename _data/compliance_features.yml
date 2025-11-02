@@ -1,0 +1,30 @@
+features:
+  - title: "Regulatory Compliance Management"
+    description: "Our comprehensive compliance management system helps organizations ensure adherence to all applicable regulations and standards. Stay up-to-date with evolving regulatory requirements and maintain compliance effortlessly."
+    image: "https://picsum.photos/id/1/300/200"
+    image_first: false
+
+  - title: "Automated Compliance Monitoring"
+    description: "Leverage automated monitoring tools that continuously track your organization's compliance status. Receive alerts and notifications about potential compliance issues before they become problems."
+    image: "https://picsum.photos/id/2/300/200"
+    image_first: true
+
+  - title: "Large-Scale Data Analysis"
+    description: "Utilize advanced data analysis capabilities to process and analyze large volumes of compliance-related data. Identify patterns, anomalies, and areas of concern through comprehensive data insights."
+    image: "https://picsum.photos/id/3/300/200"
+    image_first: false
+
+  - title: "Compliance Reporting"
+    description: "Generate comprehensive compliance reports with detailed analytics and visualizations. Ensure all stakeholders have access to accurate, up-to-date compliance information."
+    image: "https://picsum.photos/id/4/300/200"
+    image_first: true
+
+  - title: "Audit Trail Management"
+    description: "Maintain complete audit trails of all compliance-related activities. Track changes, access records, and maintain detailed logs for regulatory audits and investigations."
+    image: "https://picsum.photos/id/5/300/200"
+    image_first: false
+
+  - title: "Expert Support"
+    description: "Access expert support from our compliance specialists. Our team provides guidance, training, and assistance to ensure your organization maintains full regulatory compliance."
+    image: "https://picsum.photos/id/6/300/200"
+    image_first: true

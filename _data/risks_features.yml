@@ -1,0 +1,30 @@
+features:
+  - title: "Risk Identification"
+    description: "We offer services to identify potential risks in your organization, using advanced methodologies and specialized tools."
+    image: "https://picsum.photos/id/1/300/200"
+    image_first: false
+
+  - title: "Risk Evaluation"
+    description: "Our system allows evaluating identified risks, determining their impact and probability to prioritize mitigation actions."
+    image: "https://picsum.photos/id/2/300/200"
+    image_first: true
+
+  - title: "Risk Mitigation"
+    description: "We develop effective strategies to mitigate risks, ensuring the continuity and security of your operations."
+    image: "https://picsum.photos/id/3/300/200"
+    image_first: false
+
+  - title: "Continuous Monitoring"
+    description: "We implement continuous monitoring systems to detect and respond to new risks in a timely manner."
+    image: "https://picsum.photos/id/4/300/200"
+    image_first: true
+
+  - title: "Regulatory Compliance"
+    description: "Our services ensure that your organization complies with all applicable regulations and standards, reducing legal and financial risks."
+    image: "https://picsum.photos/id/5/300/200"
+    image_first: false
+
+  - title: "Support"
+    description: "We provide comprehensive support for all our risk management solutions. Our team of experts is available to assist with any issues or questions, ensuring that your operations run smoothly and efficiently."
+    image: "https://picsum.photos/id/6/300/200"
+    image_first: true

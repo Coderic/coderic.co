@@ -1,0 +1,9 @@
+# Site Configuration
+site:
+  dashboard_url: "/dashboard"
+  auth:
+    callback_url: "https://coderic.co/callback"
+    logout_url: "https://coderic.co/logout"
+    client_id: "In43D8hfptI5B17Xo7XZX4aBkhfMuH56"
+    domain: "auth.coderic.org"
+    audience: "https://coderic.eu.auth0.com/userinfo"

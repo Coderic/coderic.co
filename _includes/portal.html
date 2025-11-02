@@ -16,31 +16,31 @@
       <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto" id="navbarSupportedContentY">
         <ul class="flex flex-row mr-auto">
           <li class="static">
-            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {{ request()->routeIs('software') ? 'bg-orange-500' : 'bg-stone-800' }}"
+            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {% if page.url == '/core.html' or page.url == '/core/' %}bg-orange-500{% else %}bg-stone-800{% endif %}"
               href="/core">
               CORE BANKING & LOANS
             </a>
           </li>
           <li class="static">
-            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {{ request()->routeIs('platform') ? 'bg-orange-500' : 'bg-stone-800' }}"
+            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {% if page.url == '/accounting.html' or page.url == '/accounting/' %}bg-orange-500{% else %}bg-stone-800{% endif %}"
               href="/accounting">
               BLOCKCHAIN ACCOUNTING
             </a>
           </li>
           <li class="static">
-            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {{ request()->routeIs('infrastructure') ? 'bg-orange-500' : 'bg-stone-800' }}"
+            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {% if page.url == '/risks.html' or page.url == '/risks/' %}bg-orange-500{% else %}bg-stone-800{% endif %}"
               href="/risks">
               RISK MANAGEMENT SYSTEM
             </a>
           </li>
           <li class="static">
-            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {{ request()->routeIs('large-scale') ? 'bg-orange-500' : 'bg-stone-800' }}"
+            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {% if page.url == '/fmi.html' or page.url == '/fmi/' %}bg-orange-500{% else %}bg-stone-800{% endif %}"
               href="/fmi">
               FINANCIAL MARKET INFRASTRUCTURE
             </a>
           </li>
           <li class="static">
-            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {{ request()->routeIs('large-scale') ? 'bg-orange-500' : 'bg-stone-800' }}"
+            <a class="flex items-end h-24 pb-6 font-semibold text-white transition duration-200 ease-in-out hover:bg-neutral-600 focus:bg-neutral-600 lg:px-6 {% if page.url == '/compliance.html' or page.url == '/compliance/' %}bg-orange-500{% else %}bg-stone-800{% endif %}"
               href="/compliance">
               REGULATORY COMPLIANCE
             </a>

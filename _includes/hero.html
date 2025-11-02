@@ -1,0 +1,22 @@
+<div class="bg-stone-800 jumbotron px-20 {% if include.hero_class %}{{ include.hero_class }}{% else %}py-14{% endif %} flex overflow-hidden">
+    <div class="w-1/2 text-white {% if include.hero_class %}{{ include.hero_class }}{% else %}py-14{% endif %}">
+        <large class="inline-flex rounded-full text-xl border-stone-500 text-orange-500 border-2 pt-1 px-3">
+            {% if include.icon %}
+                {{ include.icon }}
+            {% endif %}
+            {{ include.badge }}
+        </large>
+        <h1 class="text-6xl font-bold mb-4 mt-4">
+            {{ include.title }}
+        </h1>
+        <p class="text-lg mb-4">{{ include.description }}</p>
+        {% if include.cta_url %}
+        <a href="{{ include.cta_url }}" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded-lg text-lg">
+            {{ include.cta_text | default: "Get Started" }}
+        </a>
+        {% endif %}
+    </div>
+    <div class="w-1/2 {% if include.image_class %}{{ include.image_class }}{% else %}flex items-center{% endif %}">
+        <img src="{{ include.image }}" class="{% if include.image_width %}{{ include.image_width }}{% else %}w-full{% endif %} float-right" alt="{{ include.title }}" />
+    </div>
+</div>

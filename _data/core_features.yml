@@ -1,0 +1,30 @@
+features:
+  - title: "Comprehensive Banking Solutions"
+    description: "Our core banking solutions offer robust and scalable services to meet the needs of modern financial institutions. Ensure efficient and secure transaction processing with our advanced banking platform."
+    image: "https://picsum.photos/id/1/300/200"
+    image_first: false
+
+  - title: "Flexible Loan Management"
+    description: "Manage loans efficiently with our flexible loan management system. Our platform supports various loan types and configurations, ensuring seamless loan processing and management tailored to your financial institution's needs."
+    image: "https://picsum.photos/id/2/300/200"
+    image_first: true
+
+  - title: "Secure Transaction Processing"
+    description: "Our secure transaction processing services ensure the safety and integrity of your financial transactions. Leverage our advanced security measures to protect your clients' data and maintain trust in your financial services."
+    image: "https://picsum.photos/id/3/300/200"
+    image_first: false
+
+  - title: "Advanced Analytics"
+    description: "Utilize our advanced analytics tools to gain insights into your financial operations. Our platform provides comprehensive data analysis and reporting capabilities to help you make informed decisions and drive growth."
+    image: "https://picsum.photos/id/4/300/200"
+    image_first: true
+
+  - title: "Customer Relationship Management"
+    description: "Enhance your customer relationships with our integrated CRM solutions. Our platform helps you manage customer interactions, track customer data, and improve customer satisfaction and loyalty."
+    image: "https://picsum.photos/id/5/300/200"
+    image_first: false
+
+  - title: "Regulatory Compliance"
+    description: "Ensure compliance with industry regulations and standards with our comprehensive compliance management tools. Our platform helps you stay up-to-date with regulatory requirements and maintain compliance effortlessly."
+    image: "https://picsum.photos/id/6/300/200"
+    image_first: true

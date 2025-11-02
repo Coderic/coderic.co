@@ -1,0 +1,30 @@
+features:
+  - title: "Third-Party Blockchain Solutions"
+    description: "Coderic Fintech also offers third-party blockchain solutions. Clients can access a wide range of blockchain solutions provided by trusted third-party vendors, all managed and supported by Coderic Fintech."
+    image: "https://picsum.photos/id/1/300/200"
+    image_first: false
+
+  - title: "Scalability"
+    description: "Our blockchain solutions are designed to scale with your business. Whether you need to add more users, increase storage, or enhance functionality, Coderic Fintech makes it easy to scale your blockchain environment as your business grows."
+    image: "https://picsum.photos/id/2/300/200"
+    image_first: true
+
+  - title: "Shared Blockchain Platforms"
+    description: "Coderic Fintech offers access to shared blockchain platforms where multiple clients can use the same blockchain environment. This is a cost-effective solution for businesses looking to leverage powerful blockchain technology without the need for dedicated resources."
+    image: "https://picsum.photos/id/3/300/200"
+    image_first: false
+
+  - title: "Dedicated Blockchain Platforms"
+    description: "For clients with specific needs, Coderic Fintech provides dedicated blockchain platforms. This ensures that the blockchain environment is tailored to the client's requirements, offering enhanced performance and security."
+    image: "https://picsum.photos/id/4/300/200"
+    image_first: true
+
+  - title: "Security"
+    description: "Security is a top priority at Coderic Fintech. Our blockchain offerings include robust security measures to protect your data and ensure compliance with industry standards."
+    image: "https://picsum.photos/id/5/300/200"
+    image_first: false
+
+  - title: "Support"
+    description: "Coderic Fintech provides comprehensive support for all our blockchain solutions. Our team of experts is available to assist with any issues or questions, ensuring that your blockchain environment runs smoothly."
+    image: "https://picsum.photos/id/6/300/200"
+    image_first: true

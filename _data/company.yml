@@ -5,7 +5,7 @@ tagline: "The Future of Financial Technology"
 description: "Corporation Oriented to the Development of Engineering of Resources Information Commercial"
 
 # Corporate Information
-parent_company: "Coderic Corporation"
+parent_company: "Coderic Organization"
 founded: "2020"
 network: "FINTECH"
 
@@ -80,9 +80,9 @@ social:
 
 # Related Properties
 coderic_network:
-  - name: "Coderic Corporation"
+  - name: "Coderic Organization"
     url: "https://coderic.org"
-    description: "Parent company and corporate headquarters"
+    description: "Coderic organization and coordination center"
   
   - name: "Coderic Cloud"
     url: "https://coderic.cloud"

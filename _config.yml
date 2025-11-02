@@ -2,3 +2,14 @@ url: "https://coderic.co"
 title: "Coderic Fintech"
 network: "FINTECH"
 remote_theme: Coderic/coderic.org
+
+# Exclude documentation files from Jekyll processing
+exclude:
+  - DEVELOPER_GUIDE.md
+  - REFACTORING_SUMMARY.md
+  - CONTENT_ENHANCEMENT_SUMMARY.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

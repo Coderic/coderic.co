@@ -1,7 +1,3 @@
----
-render_with_liquid: false
----
-
 # ?? Resumen de Refactorizaci?n - Coderic Fintech
 
 ## ?? An?lisis del Sitio

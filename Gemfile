@@ -6,5 +6,6 @@ gem "jekyll-sitemap"
 gem "jekyll-seo-tag"
 gem "jekyll-feed"
 gem "jekyll-github-metadata"
+gem "jekyll-sass-converter", "~> 3.1"
 gem "webrick"
 

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="color-scheme" content="light">
+  {% if site.google_adsense_account %}
+  <meta name="google-adsense-account" content="{{ site.google_adsense_account }}">
+  {% endif %}
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+  <link rel="icon" type="image/svg-xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#f97316">
+  <link rel="alternate" href="{{ site.url }}{{ site.baseurl }}/" hreflang="x-default">
+  <meta name="author" content="{{ site.title | default: 'Coderic' }}">
+  <meta name="title" content="{{ site.title | default: 'Coderic' }}">
+  <meta name="description" content="{{ site.description | default: 'Corporation Oriented to the Development of Engineering Resources and Information for Commerce' }}">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% if site.schema_org %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Corporation",
+      "name": "{{ site.title | default: 'Coderic' }}",
+      "url": "{{ site.url }}{{ site.baseurl }}/",
+      "logo": "{{ site.url }}{{ site.baseurl }}{{ site.logo | default: '/assets/img/coderic-isotipo.svg' }}",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "{{ site.email | default: 'coderic@coderic.org' }}",
+          "availableLanguage": ["en", "es"]
+        }
+      ],
+      "sameAs": [
+        "https://coderic.co",
+        "https://coderic.cloud",
+        "https://coderic.net",
+        "https://x.com/Coderic",
+        "https://linkedin.com/company/coderic/",
+        "https://github.com/Coderic"
+      ]
+    }
+  </script>
+  {% endif %}
+  {% if site.google_analytics_id %}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics_id }}');
+  </script>
+  {% endif %}
+  {% seo %}
+</head>
+<body>
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+  <div class="min-h-screen flex flex-col bg-white">
+    <!-- Header -->
+    <header class="border-t-4 border-b-8 border-orange-500 bg-white">
+      <div class="max-w-7xl mx-auto container-padding">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 sm:py-6">
+          <a href="{{ '/' | relative_url }}" class="flex justify-start" itemscope itemtype="https://schema.org/Corporation">
+            <img src="{{ site.logo | default: '/assets/img/coderic-isotipo.svg' | relative_url }}" itemprop="logo" alt="{{ site.title | default: 'Coderic' }} logo" class="h-20">
+            <svg class="h-20" viewBox="0 0 300 50" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="metal" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="hsl(0,0%,58%)" />
+                  <stop offset="47%" stop-color="hsl(0,0%,80%)" />
+                  <stop offset="53%" stop-color="hsl(0,0%,38%)" />
+                  <stop offset="100%" stop-color="hsl(0,0%,58%)" />
+                </linearGradient>
+                <linearGradient id="miel" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#fec963" />
+                  <stop offset="50%" stop-color="#fea032" />
+                  <stop offset="100%" stop-color="#fe7b05" />
+                </linearGradient>
+              </defs>
+              <text
+                style="font-size:34px;
+                font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Red Hat Display';letter-spacing:-2px;fill:url(#metal);"
+                x="0" y="37.590412">{{ site.title | default: 'CODERIC' | upcase }} {{ site.network | default: '' }}</text>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main" class="flex-1" tabindex="-1">
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-stone-300 border-t-4 border-orange-500">
+      <div class="max-w-7xl mx-auto container-padding py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+          <nav aria-label="Documentation">
+            <h3 class="text-white font-semibold mb-3">Resources</h3>
+            <ul class="space-y-2">
+              {% if site.footer_links %}
+                {% for link in site.footer_links %}
+                  <li>
+                    <a href="{{ link.url | relative_url }}" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 rounded px-1"
+                      aria-label="{{ link.label }}">{{ link.label }}</a>
+                  </li>
+                {% endfor %}
+              {% endif %}
+            </ul>
+          </nav>
+          <nav aria-label="Legal and policies">
+            <h3 class="text-white font-semibold mb-3">Legal</h3>
+            <ul class="space-y-2">
+              {% if site.privacy_url %}
+              <li>
+                <a href="{{ site.privacy_url | relative_url }}" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 rounded px-1"
+                  aria-label="Privacy policy">Privacy</a>
+              </li>
+              {% endif %}
+              {% if site.legal_url %}
+              <li>
+                <a href="{{ site.legal_url | relative_url }}" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 rounded px-1"
+                  aria-label="Legal information">Legal</a>
+              </li>
+              {% endif %}
+              {% if site.tos_url %}
+              <li>
+                <a href="{{ site.tos_url | relative_url }}" class="hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 rounded px-1"
+                  aria-label="Terms and conditions">Terms and Conditions</a>
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+        <div class="border-t border-stone-700 pt-6 text-center text-sm">
+          <p class="mb-2">Corporation Oriented to the Development of Engineering Resources and Information for Commerce</p>
+          <p>
+            {{ site.title | default: 'Coderic' }} <sup>©</sup> · Since September 30, 2004
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <noscript>
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 m-4" role="alert">
+      <p>Please enable JavaScript to continue using this application.</p>
+    </div>
+  </noscript>
+  
+  {% if site.google_adsense_account %}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.google_adsense_account }}"
+     crossorigin="anonymous"></script>
+  {% endif %}
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  {% if site.auth0_domain %}
+  <script src="https://cdn.auth0.com/js/auth0/9.28.0/auth0.min.js"></script>
+  {% endif %}
+  {% if site.auth_js_path %}
+  <script type="text/javascript" src="{{ site.auth_js_path | relative_url }}"></script>
+  {% endif %}
+</body>
+</html>

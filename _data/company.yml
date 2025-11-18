@@ -1,17 +1,17 @@
-# Coderic Business & Fintech - Información de la Empresa
+# Coderic Fintech - Información de la Empresa
 
-name: "Coderic Business & Fintech"
-tagline: "Soluciones Empresariales y Tecnología Financiera"
-description: "Canal de comercialización para servicios financieros y empresariales. Soluciones FinTech y Business para empresas modernas."
+name: "Coderic Fintech"
+tagline: "Tecnología Financiera"
+description: "Canal de comercialización para servicios financieros. Soluciones FinTech especializadas para instituciones financieras modernas."
 
 # Información Corporativa
 parent_company: "Coderic"
 founded: "2004"
-network: "BUSINESS"
+network: "FINTECH"
 
 # Misión y Visión
-mission: "Empoderar a las empresas e instituciones financieras con soluciones innovadoras, seguras y escalables de tecnología financiera y empresarial que impulsen la transformación digital y la excelencia operacional."
-vision: "Convertirnos en el proveedor líder de soluciones integrales de tecnología financiera y empresarial, permitiendo a nuestros clientes navegar el panorama en evolución de las finanzas digitales con confianza y agilidad."
+mission: "Empoderar a las instituciones financieras con soluciones innovadoras, seguras y escalables de tecnología financiera que impulsen la transformación digital y la excelencia operacional."
+vision: "Convertirnos en el proveedor líder de soluciones integrales de tecnología financiera, permitiendo a nuestros clientes navegar el panorama en evolución de las finanzas digitales con confianza y agilidad."
 
 # Valores Fundamentales
 values:
@@ -84,9 +84,13 @@ coderic_network:
     url: "https://coderic.net"
     description: "Plataforma de contenido y recursos digitales"
   
-  - name: "Coderic Business & Fintech"
+  - name: "Coderic Fintech"
     url: "https://coderic.co"
-    description: "División de soluciones de tecnología financiera y empresarial"
+    description: "División de soluciones de tecnología financiera"
+  
+  - name: "Coderic Business"
+    url: "https://business.coderic.co"
+    description: "División de soluciones empresariales y productos Prodaric"
 
 # Categorías de Servicios
 service_pillars:

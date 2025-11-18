@@ -1,0 +1,228 @@
+<!-- Flyout Navigation Menu -->
+<nav class="bg-stone-900 shadow-lg sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+  <!-- Top Bar -->
+  <div class="bg-stone-950 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-end py-2 text-sm">
+        <!-- Auth Buttons -->
+        <div class="flex items-center gap-2 text-white">
+          <div class="guest hidden">
+            <a class="flex items-center gap-1.5 px-3 py-1.5 hover:text-orange-500 transition-colors rounded" 
+              href="{{ '/' | relative_url }}" onclick="if(typeof login === 'function') { login(); return false; }">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+              </svg>
+              <span class="hidden sm:inline">Iniciar sesión</span>
+            </a>
+          </div>
+          <div class="authenticated hidden">
+            {% if site.profile_url %}
+            <a href="{{ site.profile_url | relative_url }}" class="flex items-center gap-1.5 px-3 py-1.5 hover:text-orange-500 transition-colors rounded">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+              <span class="hidden lg:inline" id="username"></span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="authenticated hidden">
+            {% if site.dashboard_url %}
+            <a href="{{ site.dashboard_url | relative_url }}" class="flex items-center gap-1.5 px-3 py-1.5 hover:text-orange-500 transition-colors rounded">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+              </svg>
+              <span class="hidden sm:inline">Panel</span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="authenticated hidden">
+            <button onclick="if(typeof logout === 'function') { logout(); return false; }" 
+              class="flex items-center gap-1.5 px-3 py-1.5 hover:text-orange-500 transition-colors rounded">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+              </svg>
+              <span class="hidden sm:inline">Cerrar sesión</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Navigation with Flyout Menus -->
+  <div class="bg-stone-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button type="button" id="mobile-menu-button" class="text-white hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded p-2" 
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" 
+            aria-label="Toggle menu" aria-expanded="false">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        {% if site.navigation %}
+        <div class="hidden lg:flex lg:items-center lg:space-x-8">
+          {% for item in site.navigation %}
+            {% if item.has_flyout and item.flyout_sections %}
+              <!-- Flyout Menu Item -->
+              <div class="relative flyout-group">
+                <button type="button" class="flyout-button text-white font-semibold hover:text-orange-500 transition-colors py-6 flex items-center gap-1" aria-expanded="false">
+                  {{ item.label | upcase }}
+                  <svg class="w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+                
+                <!-- Flyout Panel -->
+                <div class="flyout-panel absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0 opacity-0 invisible transition-all duration-200">
+                  <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                      {% for section in item.flyout_sections %}
+                        <div>
+                          <h3 class="text-base font-semibold leading-6 text-gray-900 mb-4">{{ section.title }}</h3>
+                          <ul class="space-y-4">
+                            {% for link in section.links %}
+                            <li>
+                              <a href="{{ link.url | relative_url }}" class="-m-3 flex gap-4 rounded-lg p-3 hover:bg-gray-50 transition-colors group">
+                                <div class="flex-1">
+                                  <p class="text-sm font-medium text-gray-900">{{ link.label }}</p>
+                                  {% if link.description %}
+                                  <p class="mt-1 text-sm text-gray-500">{{ link.description }}</p>
+                                  {% endif %}
+                                </div>
+                                <svg class="h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500 transition-colors" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                                </svg>
+                              </a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% else %}
+              <!-- Regular Menu Item -->
+              <a href="{{ item.url | relative_url }}" 
+                 class="text-white font-semibold hover:text-orange-500 transition-colors py-6 block">
+                {{ item.label | upcase }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-stone-800 pb-4">
+      {% if site.navigation %}
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        {% for item in site.navigation %}
+          {% if item.has_flyout and item.flyout_sections %}
+            <!-- Mobile Flyout Item -->
+            <div class="mobile-flyout-group">
+              <button type="button" 
+                      class="mobile-flyout-toggle text-white font-semibold hover:bg-stone-800 hover:text-orange-500 w-full text-left px-3 py-3 rounded-md flex items-center justify-between transition-colors"
+                      onclick="this.parentElement.classList.toggle('active')">
+                <span>{{ item.label | upcase }}</span>
+                <svg class="w-5 h-5 transition-transform" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div class="mobile-flyout-content hidden pl-4 pb-2">
+                {% for section in item.flyout_sections %}
+                  <div class="mb-4">
+                    <h4 class="text-sm font-semibold text-gray-400 mb-2">{{ section.title }}</h4>
+                    <ul class="space-y-1">
+                      {% for link in section.links %}
+                      <li>
+                        <a href="{{ link.url | relative_url }}" class="block text-gray-300 hover:text-orange-500 px-3 py-2 rounded-md text-sm transition-colors">
+                          {{ link.label }}
+                        </a>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% else %}
+            <!-- Mobile Regular Item -->
+            <a href="{{ item.url | relative_url }}" 
+               class="text-white font-semibold hover:bg-stone-800 hover:text-orange-500 block px-3 py-3 rounded-md transition-colors">
+              {{ item.label | upcase }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</nav>
+
+<script>
+// Desktop flyout menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Flyout menu hover handlers
+  document.querySelectorAll('.flyout-group').forEach(group => {
+    let timeout;
+    const button = group.querySelector('.flyout-button');
+    const panel = group.querySelector('.flyout-panel');
+    const arrow = button.querySelector('svg');
+    
+    // Show on hover
+    group.addEventListener('mouseenter', function() {
+      clearTimeout(timeout);
+      panel.classList.remove('opacity-0', 'invisible');
+      panel.classList.add('opacity-100', 'visible');
+      arrow.classList.add('rotate-180');
+    });
+    
+    // Hide on leave
+    group.addEventListener('mouseleave', function() {
+      panel.classList.remove('opacity-100', 'visible');
+      panel.classList.add('opacity-0', 'invisible');
+      arrow.classList.remove('rotate-180');
+    });
+  });
+  
+  // Mobile flyout menu toggle
+  document.querySelectorAll('.mobile-flyout-toggle').forEach(button => {
+    button.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const svg = this.querySelector('svg');
+      const group = this.parentElement;
+      
+      content.classList.toggle('hidden');
+      
+      if (group.classList.contains('active')) {
+        svg.style.transform = 'rotate(180deg)';
+      } else {
+        svg.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+});
+</script>
+
+<style>
+.mobile-flyout-group.active .mobile-flyout-toggle svg {
+  transform: rotate(180deg);
+}
+
+.flyout-panel {
+  pointer-events: none;
+}
+
+.flyout-group:hover .flyout-panel {
+  pointer-events: auto;
+}
+</style>

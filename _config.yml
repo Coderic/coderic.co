@@ -11,14 +11,66 @@ remote_theme: Coderic/jekyll-theme-coderic
 # Logo
 logo: "/images/logo.svg"
 
-# Navigation
+# Navigation with flyout menu support
 navigation:
   - label: "Inicio"
     url: "/"
   - label: "FinTech"
     url: "/#fintech"
+    has_flyout: true
+    flyout_sections:
+      - title: "Servicios Financieros"
+        links:
+          - label: "Banca Central"
+            url: "/core"
+            description: "Sistemas de banca central y gestión de préstamos"
+          - label: "Contabilidad Blockchain"
+            url: "/accounting"
+            description: "Plataformas de contabilidad transparente basadas en blockchain"
+          - label: "Gestión de Riesgos"
+            url: "/risks"
+            description: "Sistemas robustos de evaluación y gestión de riesgos financieros"
+          - label: "Infraestructura de Mercado Financiero"
+            url: "/fmi"
+            description: "Soluciones para infraestructura de mercados financieros"
+          - label: "Cumplimiento Regulatorio"
+            url: "/compliance"
+            description: "Sistemas de cumplimiento regulatorio y reportes financieros"
   - label: "Business"
     url: "/#business"
+    has_flyout: true
+    flyout_sections:
+      - title: "Productos Prodaric"
+        links:
+          - label: "Prodaric CRM"
+            url: "/prodaric/crm"
+            description: "Customer Relationship Management"
+          - label: "Prodaric ERP"
+            url: "/prodaric/erp"
+            description: "Enterprise Resource Planning"
+          - label: "Prodaric HRM"
+            url: "/prodaric/hrm"
+            description: "Human Resource Management"
+          - label: "Prodaric CCR"
+            url: "/prodaric/ccr"
+            description: "Continuity of Care Record"
+          - label: "Prodaric LCM"
+            url: "/prodaric/lcm"
+            description: "Learning Content Management"
+          - label: "Prodaric CMS"
+            url: "/prodaric/cms"
+            description: "Content Management System"
+      - title: "Sistemas Empresariales"
+        links:
+          - label: "Sistemas de Contabilidad"
+            url: "#"
+            description: "Sistemas contables empresariales completos"
+          - label: "Sistemas Administrativos"
+            url: "#"
+            description: "Gestión administrativa integral para empresas"
+          - label: "Sistemas de Control de Acceso"
+            url: "#"
+            description: "Control de acceso y seguridad empresarial"
   - label: "Contacto"
     url: "/contact"
 

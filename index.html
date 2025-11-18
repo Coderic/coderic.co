@@ -17,17 +17,17 @@ layout: page
                     {{ company.network | upcase }}
                 </div>
                 <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
-                    {{ company.tagline }}
+                    Soluciones Empresariales y Tecnología Financiera
                 </h1>
                 <p class="text-base sm:text-lg mb-3 sm:mb-4 text-gray-200">
-                    Where innovation and financial expertise converge to provide custom fintech solutions for any need.
+                    Canal de comercialización para servicios financieros y empresariales. Soluciones FinTech y Business para empresas modernas. Productos Prodaric y sistemas empresariales integrados.
                 </p>
                 <p class="text-sm sm:text-base mb-6 text-gray-300">
-                    Part of {{ company.parent_company }} | Serving {{ company.stats[0].number }} institutions worldwide
+                    Parte del ecosistema {{ company.parent_company }} | Servicios empresariales y financieros
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                    <a href="/dashboard" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-lg text-base sm:text-lg transition-colors duration-300">Get Started</a>
-                    <a href="/about" class="bg-transparent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg text-base sm:text-lg border-2 border-white transition-colors duration-300">Learn More</a>
+                    <a href="/dashboard" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 px-6 rounded-lg text-base sm:text-lg transition-colors duration-300">Comenzar Ahora</a>
+                    <a href="/about" class="bg-transparent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg text-base sm:text-lg border-2 border-white transition-colors duration-300">Conocer Más</a>
                 </div>
             </div>
             <!-- Image -->
@@ -62,29 +62,44 @@ layout: page
     </div>
 </div>
 
-<!-- Services Section -->
-<div class="py-8 sm:py-12 lg:py-16">
+<!-- FinTech Services Section -->
+<section id="fintech" class="py-8 sm:py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8 sm:mb-12">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Our Fintech Solutions</h2>
-            <p class="text-lg sm:text-xl text-gray-600">Comprehensive financial technology services designed for modern institutions</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Soluciones FinTech</h2>
+            <p class="text-lg sm:text-xl text-gray-600">Servicios financieros diseñados para instituciones modernas</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 cards-animate">
-            <a href="/core" class="card h-56 sm:h-64 px-4 pt-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+            {% for service in site.data.services.fintech_services %}
+            <a href="{{ service.url }}" class="card h-56 sm:h-64 px-4 pt-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <div class="boxie">
                     <div class="icon mb-4">
                         <svg class="w-10 h-10 text-gray-500 mx-auto mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
                             <path d="M29.391,14.527L17.473,2.609C17.067,2.203,16.533,2,16,2c-0.533,0-1.067,0.203-1.473,0.609L2.609,14.527 C2.203,14.933,2,15.466,2,16s0.203,1.067,0.609,1.473l11.917,11.917C14.933,29.797,15.467,30,16,30c0.533,0,1.067-0.203,1.473-0.609 l11.917-11.917C29.797,17.067,30,16.534,30,16S29.797,14.933,29.391,14.527z M16,28.036L3.965,16L16,3.964L28.036,16L16,28.036z"/>
                         </svg>
                     </div>
-                    <h3 class="text-base sm:text-lg font-semibold text-center mb-2">CORE BANKING & LOANS</h3>
-                    <p class="text-sm text-center hidden sm:block">Efficient software solutions for banking and loan management.</p>
+                    <h3 class="text-base sm:text-lg font-semibold text-center mb-2">{{ service.name | upcase }}</h3>
+                    <p class="text-sm text-center hidden sm:block">{{ service.description }}</p>
                 </div>
             </a>
-            <a href="/accounting" class="card h-56 sm:h-64 px-4 pt-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Prodaric Products Section -->
+<section id="prodaric" class="py-8 sm:py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8 sm:mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Productos Prodaric</h2>
+            <p class="text-lg sm:text-xl text-gray-600">The Productivity Framework - Sistemas empresariales integrados</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 cards-animate">
+            {% for product in site.data.services.prodaric_products %}
+            <a href="{{ product.url }}" class="card h-56 sm:h-64 px-4 pt-8 rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                 <div class="boxie">
                     <div class="icon mb-4">
-                        <svg class="w-10 h-10 text-gray-500 mx-auto mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                        <svg class="w-10 h-10 text-orange-500 mx-auto mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
                             <path d="m28,28H4c-1.1028,0-2-.8972-2-2v-6h2v6h24v-6h2v6c0,1.1028-.8972,2-2,2Z"/>
                             <path d="m17,17v4c0,.5522.4477,1,1,1h4c.5523,0,1-.4478,1-1v-4c0-.5523-.4477-1-1-1h-4c-.5523,0-1,.4477-1,1Zm2,1h2v2h-2v-2Z"/>
                             <path d="m9,17v4c0,.5522.4477,1,1,1h4c.5523,0,1-.4478,1-1v-4c0-.5523-.4477-1-1-1h-4c-.5523,0-1,.4477-1,1Zm2,1h2v2h-2v-2Z"/>
@@ -92,57 +107,39 @@ layout: page
                             <path d="m5,5v8c0,.5522.4477,1,1,1h8c.5523,0,1-.4478,1-1V5c0-.5523-.4477-1-1-1H6c-.5523,0-1,.4477-1,1Zm2,1h6v6h-6v-6Z"/>
                         </svg>
                     </div>
-                    <h3 class="text-base sm:text-lg font-semibold text-center mb-2">BLOCKCHAIN ACCOUNTING</h3>
-                    <p class="text-sm text-center hidden sm:block">Robust platforms for secure and transparent accounting.</p>
+                    <h3 class="text-base sm:text-lg font-semibold text-center mb-2">{{ product.name | upcase }}</h3>
+                    <p class="text-sm text-center hidden sm:block">{{ product.description }}</p>
                 </div>
             </a>
-            <a href="/risks" class="card h-56 sm:h-64 px-4 pt-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                <div class="boxie">
-                    <div class="icon mb-4">
-                        <svg class="w-10 h-10 text-gray-500 mx-auto mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
-                            <rect x="18" y="26" width="12" height="2"/>
-                            <rect x="18" y="21" width="12" height="2"/>
-                            <rect x="18" y="16" width="12" height="2"/>
-                            <path d="M14,25H9.5A7.4964,7.4964,0,0,1,8.1782,10.124,10,10,0,0,1,28,12H26a7.999,7.999,0,0,0-15.9507-.87l-.09.8335L9.123,12.02A5.4962,5.4962,0,0,0,9.5,23H14Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-base sm:text-lg font-semibold text-center mb-2">RISK MANAGEMENT</h3>
-                    <p class="text-sm text-center hidden sm:block">Scalable and secure infrastructure for risk management.</p>
-                </div>
-            </a>
-            <a href="/fmi" class="card h-56 sm:h-64 px-4 pt-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                <div class="boxie">
-                    <div class="icon mb-4">
-                        <svg class="w-10 h-10 text-gray-500 mx-auto mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20,6.14746A4.97289,4.97289,0,0,0,19.35,6.04,7.49246,7.49246,0,0,0,5.35,4.04,5.9039,5.9039,0,0,0,4,4.36505,5.97992,5.97992,0,0,0,4,15.65033V13.44556A3.97628,3.97628,0,0,1,4,6.5448,3.92951,3.92951,0,0,1,5.56,6.03L6.63,5.92l.5-.95A5.48711,5.48711,0,0,1,17.39,6.43l.3,1.5,1.53.11a2.91321,2.91321,0,0,1,.78.17108,2.96258,2.96258,0,0,1,0,5.6037v2.08435a4.9717,4.9717,0,0,0,0-9.75165Z"/>
-                            <path d="M12,11c-3.81818,0-6,.75835-6,2.16667v8.66666C6,23.24165,9.08729,24,12,24c2.91278,0,6-.75835,6-2.16667V13.16667C18,11.75835,15.81818,11,12,11Zm0,1c2.71123,0,4.90909.81087,4.90909,1.70833s-2.19786,1.625-4.90909,1.625-4.90909-.72753-4.90909-1.625S9.28877,12,12,12ZM7.09091,19.92441v-1.1437A12.02567,12.02567,0,0,0,12,19.66667a12.02623,12.02623,0,0,0,4.90909-.8859v1.179a12.58847,12.58847,0,0,1-4.909.79022A12.77627,12.77627,0,0,1,7.09091,19.92441Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-base sm:text-lg font-semibold text-center mb-2">FMI</h3>
-                    <p class="text-sm text-center hidden sm:block">Comprehensive solutions for financial market infrastructure.</p>
-                </div>
-            </a>
-            <a href="/compliance" class="card h-56 sm:h-64 px-4 pt-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                <div class="boxie">
-                    <div class="icon mb-4">
-                        <svg class="w-10 h-10 text-gray-500 mx-auto mt-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path fill="none" stroke="currentColor" stroke-width="2" d="M8,6 L16,6 L16,1 L8,1 L8,6 L8,6 L8,6 Z M16,3 L21,3 L21,23 L3,23 L3,3 L8,3 M8,14 L11,17 L17,11"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-base sm:text-lg font-semibold text-center mb-2">COMPLIANCE</h3>
-                    <p class="text-sm text-center hidden sm:block">Ensuring compliance with regulations through data analysis.</p>
-                </div>
-            </a>
+            {% endfor %}
         </div>
     </div>
-</div>
+</section>
+
+<!-- Business Systems Section -->
+<section id="sistemas" class="py-8 sm:py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8 sm:mb-12">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Sistemas Empresariales</h2>
+            <p class="text-lg sm:text-xl text-gray-600">Soluciones adicionales para gestión empresarial integral</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {% for system in site.data.services.business_systems %}
+            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <h3 class="text-lg font-semibold mb-2 text-stone-800">{{ system.name }}</h3>
+                <p class="text-sm text-gray-600">{{ system.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
 <!-- Why Choose Us Section -->
 <div class="py-12 sm:py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8 sm:mb-12">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Why Choose Coderic Fintech?</h2>
-            <p class="text-lg sm:text-xl text-gray-600">Trusted by financial institutions worldwide</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">¿Por qué elegir Coderic Business & Fintech?</h2>
+            <p class="text-lg sm:text-xl text-gray-600">Confiado por instituciones financieras en todo el mundo</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {% for value in company.values limit:3 %}
@@ -164,11 +161,11 @@ layout: page
 <div class="py-12 sm:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8 sm:mb-12">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Powered by Advanced Technology</h2>
-            <p class="text-lg sm:text-xl text-gray-600">Built on a modern, scalable tech stack</p>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Impulsado por Tecnología Avanzada</h2>
+            <p class="text-lg sm:text-xl text-gray-600">Construido sobre un stack tecnológico moderno y escalable</p>
         </div>
         <div class="bg-white p-6 sm:p-8 rounded-lg shadow-xl">
-            <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center text-stone-800">Supported Languages & Frameworks</h3>
+            <h3 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center text-stone-800">Lenguajes y Frameworks Soportados</h3>
             <ul class="lang-grid grid grid-cols-4 md:grid-cols-8 gap-4 sm:gap-8 justify-items-center">
                 <li><a href="#" class="lang-logo nodejs"><span>Node.js</span></a></li>
                 <li><a href="#" class="lang-logo ruby"><span>Ruby</span></a></li>
@@ -187,7 +184,7 @@ layout: page
 <div class="py-12 sm:py-16 bg-stone-800 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8 sm:mb-12">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Part of the Coderic Ecosystem</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">Parte del Ecosistema Coderic</h2>
             <p class="text-lg sm:text-xl text-gray-300">{{ company.description }}</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -195,7 +192,7 @@ layout: page
             <a href="{{ property.url }}" target="_blank" class="bg-stone-700 p-4 sm:p-6 rounded-lg hover:bg-stone-600 transition-colors duration-300 text-center">
                 <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-orange-400">{{ property.name }}</h3>
                 <p class="text-sm text-gray-300">{{ property.description }}</p>
-                <div class="mt-3 sm:mt-4 text-orange-500 text-sm font-semibold">Learn More ?</div>
+                <div class="mt-3 sm:mt-4 text-orange-500 text-sm font-semibold">Conocer Más →</div>
             </a>
             {% endfor %}
         </div>
@@ -205,13 +202,13 @@ layout: page
 <!-- CTA Section -->
 <div class="py-12 sm:py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Ready to Get Started?</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">¿Listo para Comenzar?</h2>
         <p class="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8">
-            Join {{ company.stats[0].number }} financial institutions that trust Coderic Fintech for their digital transformation.
+            Únete a {{ company.stats[0].number }} instituciones financieras que confían en Coderic Business & Fintech para su transformación digital.
         </p>
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <a href="/dashboard" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-300 shadow-lg">Start Your Journey</a>
-            <a href="/about" class="bg-white hover:bg-gray-100 text-stone-800 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg border-2 border-stone-800 transition-colors duration-300">Learn More About Us</a>
+            <a href="/dashboard" class="bg-orange-600 hover:bg-orange-500 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors duration-300 shadow-lg">Iniciar tu Viaje</a>
+            <a href="/about" class="bg-white hover:bg-gray-100 text-stone-800 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg border-2 border-stone-800 transition-colors duration-300">Conocer Más Sobre Nosotros</a>
         </div>
     </div>
 </div>

@@ -13,16 +13,14 @@ logo: "/images/logo.svg"
 
 # Navigation
 navigation:
-  - label: "Core Banking"
-    url: "/core"
-  - label: "Blockchain Accounting"
-    url: "/accounting"
-  - label: "Risk Management"
-    url: "/risks"
-  - label: "FMI"
-    url: "/fmi"
-  - label: "Compliance"
-    url: "/compliance"
+  - label: "FinTech"
+    url: "#fintech"
+  - label: "Prodaric"
+    url: "#prodaric"
+  - label: "Sistemas"
+    url: "#sistemas"
+  - label: "Contacto"
+    url: "/contact"
 
 # Footer Links
 footer_links:

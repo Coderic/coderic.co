@@ -1,8 +1,9 @@
 url: "https://coderic.co"
 baseurl: ""
 title: "Coderic"
-description: "Comprehensive financial technology services designed for modern institutions"
-network: "FINTECH"
+subtitle: "Business & Fintech"
+description: "Servicios empresariales y FinTech. Soluciones financieras y de negocio para empresas. Canal de comercialización para servicios financieros y empresariales."
+network: "BUSINESS"
 
 # Theme
 remote_theme: Coderic/jekyll-theme-coderic

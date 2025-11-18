@@ -13,8 +13,6 @@ logo: "/images/logo.svg"
 
 # Navigation with flyout menu support
 navigation:
-  - label: "Inicio"
-    url: "/"
   - label: "FinTech"
     url: "/#fintech"
     has_flyout: true

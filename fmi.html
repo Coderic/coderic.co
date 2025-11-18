@@ -2,7 +2,7 @@
 layout: page
 title: Infraestructura de Mercado Financiero
 ---
-{% assign service = site.data.services | where: "id", "fmi" | first %}
+{% assign service = site.data.services.services | where: "id", "fmi" | first %}
 
 {% include service-hero.html 
   icon=service.icon 

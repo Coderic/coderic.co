@@ -2,7 +2,7 @@
 layout: page
 title: Contabilidad Blockchain
 ---
-{% assign service = site.data.services | where: "id", "accounting" | first %}
+{% assign service = site.data.services.services | where: "id", "accounting" | first %}
 
 {% include service-hero.html 
   icon=service.icon 

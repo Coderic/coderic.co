@@ -2,7 +2,7 @@
 layout: page
 title: Sistema de Gestión de Riesgos
 ---
-{% assign service = site.data.services | where: "id", "risks" | first %}
+{% assign service = site.data.services.services | where: "id", "risks" | first %}
 
 {% include service-hero.html 
   icon=service.icon 

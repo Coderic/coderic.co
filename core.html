@@ -2,7 +2,7 @@
 layout: page
 title: Banca Central y Préstamos
 ---
-{% assign service = site.data.services | where: "id", "core" | first %}
+{% assign service = site.data.services.services | where: "id", "core" | first %}
 
 {% include service-hero.html 
   icon=service.icon 

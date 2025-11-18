@@ -2,7 +2,7 @@
 layout: page
 title: Cumplimiento Regulatorio
 ---
-{% assign service = site.data.services | where: "id", "compliance" | first %}
+{% assign service = site.data.services.services | where: "id", "compliance" | first %}
 
 {% include service-hero.html 
   icon=service.icon 

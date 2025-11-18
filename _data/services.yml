@@ -1,6 +1,6 @@
 # Servicios de Coderic Business & Fintech
 
-# Servicios FinTech
+# Servicios FinTech (Servicios Financieros)
 fintech_services:
   - name: "Banca Central"
     url: "/core"
@@ -22,12 +22,50 @@ fintech_services:
     description: "Soluciones para infraestructura de mercados financieros"
     icon: "market"
   
-  - name: "Cumplimiento Normativo"
+  - name: "Cumplimiento Regulatorio"
     url: "/compliance"
-    description: "Sistemas de cumplimiento regulatorio y reportes"
+    description: "Sistemas de cumplimiento regulatorio y reportes financieros"
     icon: "compliance"
 
-# Productos Prodaric - The Productivity Framework
+# Servicios Business (Servicios Empresariales - Futuro portal separado)
+business_services:
+  - name: "Prodaric CRM"
+    url: "/prodaric/crm"
+    description: "Customer Relationship Management - Gestión de relaciones con el cliente"
+    icon: "crm"
+    category: "business"
+  
+  - name: "Prodaric ERP"
+    url: "/prodaric/erp"
+    description: "Enterprise Resource Planning - Planificación de recursos empresariales"
+    icon: "erp"
+    category: "business"
+  
+  - name: "Prodaric HRM"
+    url: "/prodaric/hrm"
+    description: "Human Resource Management - Gestión de recursos humanos"
+    icon: "hrm"
+    category: "business"
+  
+  - name: "Prodaric CCR"
+    url: "/prodaric/ccr"
+    description: "Continuity of Care Record - Continuidad del Registro del Cuidado"
+    icon: "ccr"
+    category: "healthcare"
+  
+  - name: "Prodaric LCM"
+    url: "/prodaric/lcm"
+    description: "Learning Content Management - Gestión de contenidos de aprendizaje"
+    icon: "lcm"
+    category: "education"
+  
+  - name: "Prodaric CMS"
+    url: "/prodaric/cms"
+    description: "Content Management System - Sistema de gestión de contenidos"
+    icon: "cms"
+    category: "content"
+
+# Productos Prodaric (mantener para compatibilidad)
 prodaric_products:
   - name: "Prodaric CRM"
     url: "/prodaric/crm"
@@ -65,7 +103,7 @@ prodaric_products:
     icon: "cms"
     category: "content"
 
-# Sistemas Empresariales Adicionales
+# Sistemas Empresariales Adicionales (Business - Futuro portal separado)
 business_systems:
   - name: "SCM"
     description: "Administración de la cadena de suministros (Supply Chain Management)"
@@ -240,34 +278,58 @@ services:
         image_position: left
 
   - id: compliance
-    title: "CUMPLIMIENTO REGULATORIO"
+    title: "CUMPLIMIENTO REGULATORIO FINANCIERO"
     subtitle: "Soluciones de Cumplimiento Regulatorio"
-    hero_title: "Asegura el Cumplimiento Regulatorio."
-    hero_description: "Sistemas integrales de gestión de cumplimiento, monitoreo en tiempo real y reportes automatizados para cumplir con todos los requisitos regulatorios en el sector financiero."
+    hero_title: "Cumplimiento Regulatorio para el Sector Financiero."
+    hero_description: "Sistemas integrales de gestión de cumplimiento basados en estándares internacionales: PCI DSS, EMV, ISO 8583, 3D Secure, Basel III, MiFID II, KYC/AML y más."
     hero_image: "/images/iaas-hero.svg"
     icon: '<svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill="none" stroke="currentColor" stroke-width="2" d="M8,6 L16,6 L16,1 L8,1 L8,6 L8,6 L8,6 Z M16,3 L21,3 L21,23 L3,23 L3,3 L8,3 M8,14 L11,17 L17,11"/></svg>'
     sections:
-      - title: "Gestión de Cumplimiento Regulatorio"
-        description: "Herramientas integrales para gestionar y asegurar el cumplimiento con regulaciones financieras incluyendo KYC, AML, GDPR y requisitos específicos de la industria. Nuestra plataforma te mantiene actualizado con regulaciones cambiantes."
+      - title: "PCI DSS - Seguridad de Datos de Tarjetas de Pago"
+        description: "Cumplimiento completo con PCI DSS (Payment Card Industry Data Security Standard) para proteger datos de tarjetas de pago. Implementamos controles de seguridad, gestión de vulnerabilidades, políticas de seguridad y procedimientos de respuesta a incidentes según los requisitos PCI DSS. Incluye scoping, segmentación de red y mapeo a frameworks como NIST."
         image_id: 1
         image_position: right
-      - title: "Monitoreo y Alertas en Tiempo Real"
-        description: "Sistemas de monitoreo avanzados que rastrean métricas de cumplimiento en tiempo real, proporcionando alertas instantáneas para posibles violaciones o actividades sospechosas, permitiendo gestión proactiva de riesgos."
+      - title: "EMV - Seguridad de Transacciones con Chip"
+        description: "Implementación de estándares EMV (Europay, Mastercard, Visa) para transacciones seguras con tarjetas chip. Soporte para EMV v4.3 y v4.4 incluyendo gestión de claves, autenticación de tarjetas, directrices de seguridad para emisores y adquirentes, y gestión de aplicaciones. Cumplimiento con guías de seguridad EMV para terminales y aplicaciones."
         image_id: 2
         image_position: left
-      - title: "Reportes Automatizados"
-        description: "Optimiza los reportes regulatorios con nuestros sistemas automatizados que generan reportes precisos para organismos regulatorios, reduciendo el trabajo manual y asegurando la presentación oportuna de toda la documentación requerida."
+      - title: "ISO 8583 - Protocolo de Mensajería Financiera"
+        description: "Implementación del estándar ISO 8583 para intercambio de mensajes financieros. Soporte para formatos de mensajes, procesamiento de transacciones, gestión de códigos de respuesta y compatibilidad con sistemas de pago internacionales. Incluye implementación de bloques PIN ISO Format 4 y gestión de datos de transacciones."
         image_id: 3
         image_position: right
-      - title: "Rastro de Auditoría y Documentación"
-        description: "Mantén rastros de auditoría y documentación integrales de todas las actividades de cumplimiento. Nuestro sistema asegura transparencia y trazabilidad completas para inspecciones y auditorías regulatorias."
+      - title: "3D Secure (3DS) - Autenticación de Pagos"
+        description: "Implementación de 3D Secure v2.2 para autenticación de pagos en línea. Soporte para SDK de información de dispositivos, protocolo 3DS Core, funciones de autenticación y cumplimiento con requisitos de calificación 3DS. Incluye integración con sistemas de pago y gestión de autenticación de transacciones."
         image_id: 4
         image_position: left
-      - title: "Gestión de Políticas"
-        description: "Gestión centralizada de políticas y procedimientos de cumplimiento. Asegura que todas las partes interesadas tengan acceso a las políticas más recientes y rastrea reconocimiento y adherencia en toda tu organización."
+      - title: "ISO 20022 - Estándar de Mensajería Financiera Moderna"
+        description: "Implementación de ISO 20022 para plataformas de pago competitivas. Soporte para mensajería estructurada, formatos XML, integración con sistemas de pago modernos y migración desde formatos legacy. Incluye construcción de plataformas de pago basadas en ISO 20022."
         image_id: 5
         image_position: right
-      - title: "Capacitación y Certificación"
-        description: "Sistema de gestión de capacitación integrado para asegurar que todos los miembros del personal estén adecuadamente capacitados en requisitos de cumplimiento, con seguimiento de certificación y recordatorios automáticos de renovación."
+      - title: "KYC/AML - Conozca a su Cliente y Prevención de Lavado de Dinero"
+        description: "Sistemas de KYC (Know Your Customer) y AML (Anti-Money Laundering) para cumplimiento regulatorio. Verificación de identidad, monitoreo de transacciones, detección de actividades sospechosas, reportes regulatorios y gestión de listas de sanciones. Cumplimiento con regulaciones internacionales de prevención de lavado de dinero."
         image_id: 6
+        image_position: left
+      - title: "Basel III - Regulaciones de Capital Bancario"
+        description: "Cumplimiento con Basel III para gestión de capital bancario. Cálculo de ratios de capital, gestión de riesgo crediticio, riesgo operacional, gestión de liquidez y reportes regulatorios. Incluye implementación de buffers de capital y requisitos de apalancamiento."
+        image_id: 7
+        image_position: right
+      - title: "MiFID II - Mercados de Instrumentos Financieros"
+        description: "Cumplimiento con MiFID II (Markets in Financial Instruments Directive II) para mercados financieros europeos. Reportes de transacciones, transparencia de precios, gestión de órdenes, protección de inversores y reportes a autoridades regulatorias. Incluye gestión de datos de mercado y reportes de transacciones."
+        image_id: 8
+        image_position: left
+      - title: "GDPR - Protección de Datos Personales"
+        description: "Cumplimiento con GDPR (General Data Protection Regulation) para protección de datos personales en el sector financiero. Gestión de consentimiento, derechos de los titulares de datos, notificación de violaciones de datos, evaluación de impacto de protección de datos (DPIA) y gestión de datos personales en sistemas financieros."
+        image_id: 9
+        image_position: right
+      - title: "Seguridad de Terminales y Dispositivos"
+        description: "Gestión de seguridad de terminales de pago y dispositivos según estándares PCI PTS. Implementación de políticas de seguridad para terminales, gestión de claves, protección de PIN, seguridad de contactless y cumplimiento con requisitos de seguridad física. Incluye gestión de certificaciones de seguridad de dispositivos."
+        image_id: 10
+        image_position: left
+      - title: "Monitoreo y Alertas en Tiempo Real"
+        description: "Sistemas de monitoreo avanzados que rastrean métricas de cumplimiento en tiempo real, proporcionando alertas instantáneas para posibles violaciones o actividades sospechosas. Monitoreo continuo de transacciones, detección de anomalías y gestión proactiva de riesgos de cumplimiento."
+        image_id: 11
+        image_position: right
+      - title: "Reportes Automatizados y Auditoría"
+        description: "Sistemas automatizados de generación de reportes regulatorios y gestión de auditorías. Reportes para autoridades regulatorias, rastros de auditoría completos, documentación de cumplimiento y preparación para inspecciones. Incluye gestión de evidencias de cumplimiento y reportes de estado de cumplimiento."
+        image_id: 12
         image_position: left

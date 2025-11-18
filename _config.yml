@@ -13,12 +13,12 @@ logo: "/images/logo.svg"
 
 # Navigation
 navigation:
+  - label: "Inicio"
+    url: "/"
   - label: "FinTech"
-    url: "#fintech"
-  - label: "Prodaric"
-    url: "#prodaric"
-  - label: "Sistemas"
-    url: "#sistemas"
+    url: "/#fintech"
+  - label: "Business"
+    url: "/#business"
   - label: "Contacto"
     url: "/contact"
 

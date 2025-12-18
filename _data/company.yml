@@ -91,6 +91,10 @@ coderic_network:
   - name: "Coderic Business"
     url: "https://business.coderic.co"
     description: "División de soluciones empresariales y productos Prodaric"
+  
+  - name: "Coderic Store"
+    url: "https://coderic.store"
+    description: "Tienda en línea de equipos informáticos y tecnología"
 
 # Categorías de Servicios
 service_pillars:
